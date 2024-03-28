@@ -191,6 +191,9 @@ type ChatStreamRequest struct {
 	//
 	// When specified, the model's reply will be enriched with information found by quering each of the connectors (RAG).
 	Connectors []*ChatConnector `json:"connectors,omitempty" url:"connectors,omitempty"`
+
+	
+	CitationQuality *ChatRequestCitationQuality `json:"citation_quality,omitempty" url:"citation_quality,omitempty"`
 	// Defaults to `false`.
 	//
 	// When `true`, the response will only contain a list of generated search queries, but no search will take place, and no reply from the model to the user's `message` will be generated.
